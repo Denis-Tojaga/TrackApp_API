@@ -24,34 +24,30 @@ router.get('/tracks', async (req, res) => {
 
 
 
-// router.post('/tracks', async (req, res) => {
-
-//   const { name, locations } = req.body;
-
-//   //if there is no name or locations we send back an error
-//   if (!name || !locations)
-//     return res.status(422).send({ error: 'You must provide a name and locations' });
-
-//   try {
-
-//     const track = new Track({ name, locations, userId: req.user._id });
-
-//     await track.save();
-
-//     res.send(track);
-
-//   } catch (err) {
-//     res.status(422).send({ error: err.message });
-//   }
 
 
+router.post("/tracks", async (req, res) => {
 
-// });
+  const { name, locations } = req.body;
+
+  if (!name || !locations)
+    return res.status(422).send({ error: "You must provide a name and locations!" });
 
 
+  try {
 
+    //after creating this new track we can attempt to save it to our database
+    const track = new Track({ name: name, locations: locations, userId: req.user._id });
+    await track.save();
+    res.send(track);
 
+  } catch (error) {
 
+    res.status(422).send({ error: error.message });
+
+  }
+
+});
 
 
 
