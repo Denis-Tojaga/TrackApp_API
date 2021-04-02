@@ -3,6 +3,8 @@ const mongoose = require('mongoose');
 const User = mongoose.model('User');
 
 module.exports = (req, res, next) => {
+
+
   const { authorization } = req.headers;
   // authorization === 'Bearer laksjdflaksdjasdfklj'
 
@@ -10,11 +12,13 @@ module.exports = (req, res, next) => {
     return res.status(401).send({ error: 'You must be logged in.' });
   }
 
+  //when replacing DONT FORGET THE SPACE AFTER A BEARER
   const token = authorization.replace('Bearer ', '');
+
+
   jwt.verify(token, 'MY_SECRET_KEY', async (err, payload) => {
-    if (err) {
+    if (err)
       return res.status(401).send({ error: 'You must be logged in.' });
-    }
 
     const { userId } = payload;
 
@@ -22,4 +26,5 @@ module.exports = (req, res, next) => {
     req.user = user;
     next();
   });
+
 };
