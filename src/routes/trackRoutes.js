@@ -24,29 +24,35 @@ router.get('/tracks', async (req, res) => {
 
 
 
-router.post('/tracks', async (req, res) => {
+// router.post('/tracks', async (req, res) => {
 
-  const { name, locations } = req.body;
+//   const { name, locations } = req.body;
 
-  //if there is no name or locations we send back an error
-  if (!name || !locations)
-    return res.status(422).send({ error: 'You must provide a name and locations' });
+//   //if there is no name or locations we send back an error
+//   if (!name || !locations)
+//     return res.status(422).send({ error: 'You must provide a name and locations' });
 
-  try {
+//   try {
 
-    const track = new Track({ name, locations, userId: req.user._id });
+//     const track = new Track({ name, locations, userId: req.user._id });
 
-    await track.save();
+//     await track.save();
 
-    res.send(track);
+//     res.send(track);
 
-  } catch (err) {
-    res.status(422).send({ error: err.message });
-  }
+//   } catch (err) {
+//     res.status(422).send({ error: err.message });
+//   }
 
 
 
-});
+// });
+
+
+
+
+
+
 
 
 
