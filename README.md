@@ -1,3 +1,3 @@
 # TrackAppServer
-
-Custom API with Express.js from Udemy 
+# Custom API made with Express.js
+# TrackApp will be using this API
