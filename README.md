@@ -4,8 +4,8 @@
 
 ## Server setup
 
-### Download this repo from github
-### In terminal,inside the directory, type in "npm run dev" to run dev script where you should get messages like "Listening to port 3000!" and "Conected to Mongoose"
+### - Download this repo from github
+### - In terminal,inside the directory, type in "npm run dev" to run dev script
 <br />
 
  - API is made with Express.js and as a database MongoDB is used
