@@ -2,10 +2,11 @@
 # Custom API made with Express.js
 <br />
 
-### To run the server, download this repo from github
-### Inside the directory in terminal type in "npm run dev" to run dev script
-<br />
+### Server setup
 
+#### Download this repo from github
+#### Inside the directory in terminal type in "npm run dev" to run dev script
+<br />
 
  - API is made with Express.js and as a database MongoDB is used
  - Mongooose was used to communicate from an API to a MongoDB cluster
