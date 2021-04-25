@@ -2,10 +2,10 @@
 # Custom API made with Express.js
 <br />
 
-### Server setup
+## Server setup
 
-#### Download this repo from github
-#### Inside the directory in terminal type in "npm run dev" to run dev script
+### Download this repo from github
+### In terminal,inside the directory, type in "npm run dev" to run dev script where you should get messages like "Listening to port 3000!" and "Conected to Mongoose"
 <br />
 
  - API is made with Express.js and as a database MongoDB is used
