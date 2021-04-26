@@ -4,8 +4,9 @@
 
 ## Server setup
 
-### - Download this repo from github
-### - In terminal,inside the directory, type in "npm run dev" to run dev script
+- Download this repo from github
+- In terminal (inside the directory) type in "npm run dev" to run dev script
+
 <br />
 
  - API is made with Express.js and as a database MongoDB is used
